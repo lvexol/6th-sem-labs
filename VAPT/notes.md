@@ -19,3 +19,21 @@
 
 # This is the main website 
 [Google Docking Link ](https://www.exploit-db.com/google-hacking-database)
+
+## Difference between Physical logical and port 
+Here's a simple table to summarize the differences between **Physical Address (MAC Address)**, **Logical Address (IP Address)**, and **Socket/Port**:
+
+| **Aspect**              | **Physical Address (MAC Address)**                   | **Logical Address (IP Address)**                    | **Socket/Port**                                      |
+|-------------------------|------------------------------------------------------|-----------------------------------------------------|------------------------------------------------------|
+| **Purpose**             | Identifies a device on the local network            | Identifies a device on the internet or different networks | Identifies a specific service/application on a device |
+| **Type of Address**     | Hardware address                                    | Network address                                     | Endpoint for application communication               |
+| **Layer**               | Data Link Layer (Layer 2)                           | Network Layer (Layer 3)                             | Transport Layer (Layer 4)                            |
+| **Format**              | 48-bit address (e.g., `00:1A:2B:3C:4D:5E`)           | 32-bit (IPv4) or 128-bit (IPv6) address (e.g., `192.168.1.1`) | 16-bit number (e.g., port 80 for HTTP)               |
+| **Scope**               | Local network only (LAN)                            | Routable across the internet or different networks  | Identifies service on a specific device              |
+| **Assigned by**         | Manufacturer (burned into hardware)                 | Internet authority (e.g., ISP or network admin)     | Operating system (for each application/service)      |
+| **Example**             | `00:1A:2B:3C:4D:5E`                                | `192.168.1.1` (IPv4) or `2001:0db8:85a3::8a2e:0370:7334` (IPv6) | IP `192.168.1.1` with port `80` for HTTP             |
+
+This table simplifies the comparison between these three types of addresses and their roles in networking.
+
+## TCP Packet Header 
+![alt text](image.png)
