@@ -41,7 +41,7 @@ Output:
 
 Screenshots:
 
-![image.png](Lab-02-report%20154b7a782d57809cb5edf9af63f9dc3e/image.png)
+![image.png](Lab-02-report/image.png)
 
 **Conclusion:** This exercise reinforced understanding of defining functions, type signatures, and simple arithmetic operations in Haskell.
 
@@ -77,7 +77,7 @@ Output:
 
 Screenshots:
 
-![image.png](Lab-02-report%20154b7a782d57809cb5edf9af63f9dc3e/image%201.png)
+![image.png](Lab-02-report/image%201.png)
 
 **Conclusion:** This exercise demonstrates the implementation of conditional statements and comparison operators in Haskell functions.
 
@@ -115,7 +115,7 @@ Output:
 
 Screenshots:
 
-![image.png](Lab-02-report%20154b7a782d57809cb5edf9af63f9dc3e/image%202.png)
+![image.png](Lab-02-report/image%202.png)
 
 **Conclusion:** This exercise demonstrates the power of function composition and list manipulation in Haskell, showing how multiple operations can be elegantly combined into a single function.
 
@@ -155,7 +155,7 @@ Output:
 
 Screenshots:
 
-![image.png](Lab-02-report%20154b7a782d57809cb5edf9af63f9dc3e/image%203.png)
+![image.png](Lab-02-report/image%203.png)
 
 **Conclusion:** This exercise showcases how function composition can be used to create concise and readable code for complex list operations in Haskell.
 
@@ -194,7 +194,7 @@ Output:
 
 Screenshots:
 
-![image.png](Lab-02-report%20154b7a782d57809cb5edf9af63f9dc3e/image%204.png)
+![image.png](Lab-02-report/image%204.png)
 
 **Conclusion:** This exercise demonstrates the implementation of recursive functions in Haskell, showing how complex mathematical calculations can be broken down into simpler recursive steps.
 
@@ -231,7 +231,7 @@ Output:
 
 Screenshots:
 
-![image.png](Lab-02-report%20154b7a782d57809cb5edf9af63f9dc3e/image%205.png)
+![image.png](Lab-02-report/image%205.png)
 
 **Conclusion:** This exercise demonstrates recursive function implementation in Haskell for calculating powers, showing how complex calculations can be broken down into simpler recursive operations.
 
@@ -269,7 +269,7 @@ Output:
 
 Screenshots:
 
-![image.png](Lab-02-report%20154b7a782d57809cb5edf9af63f9dc3e/image%206.png)
+![image.png](Lab-02-report/image%206.png)
 
 **Conclusion:** This exercise demonstrates the use of higher-order functions (filter) and predicate functions (even) to process lists in Haskell, showing how complex list operations can be performed concisely.
 
@@ -311,7 +311,7 @@ Output:
 
 **Screenshot:** 
 
-![image.png](Lab-02-report%20154b7a782d57809cb5edf9af63f9dc3e/image%207.png)
+![image.png](Lab-02-report/image%207.png)
 
 **Conclusion:** This exercise demonstrates the implementation of list processing using pattern matching and recursion in Haskell, showing how to extract specific portions of a list effectively.
 
@@ -349,7 +349,7 @@ Output:
 
 Screenshots:
 
-![image.png](Lab-02-report%20154b7a782d57809cb5edf9af63f9dc3e/image%208.png)
+![image.png](Lab-02-report/image%208.png)
 
 **Conclusion:** This exercise shows how to work with tuples in Haskell, demonstrating pattern matching and tuple manipulation through a simple yet practical example.
 
@@ -390,6 +390,6 @@ Output:
 
 **Screenshot:**
 
-![image.png](Lab-02-report%20154b7a782d57809cb5edf9af63f9dc3e/image%209.png)
+![image.png](Lab-02-report/image%209.png)
 
 **Conclusion:** This exercise demonstrates how to process lists of tuples in Haskell, combining list recursion with tuple manipulation to perform calculations on paired data.
