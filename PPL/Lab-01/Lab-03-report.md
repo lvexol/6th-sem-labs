@@ -49,7 +49,7 @@ Output:
 
 ```
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2015bb7a782d5780a389aafc5c28ce715d/image.png)
+![image.png](Lab-03-report/image.png)
 
 **Conclusion:**
 
@@ -106,7 +106,7 @@ False
 
 **Screenshots:**
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2015bb7a782d5780a389aafc5c28ce715d/image%201.png)
+![image.png](Lab-03-report/image%201.png)
 
 **Conclusion:** This exercise demonstrates the use of mathematical operators in Haskell to implement a simple logical check.
 
@@ -161,7 +161,7 @@ Output:
 
 **Screenshots:**
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2015bb7a782d5780a389aafc5c28ce715d/image%202.png)
+![image.png](Lab-03-report/image%202.png)
 
 **Conclusion:** This exercise demonstrates the implementation of conditional statements in Haskell to handle numeric computations.
 
@@ -222,7 +222,7 @@ Output:
 
 **Screenshots:**
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2015bb7a782d5780a389aafc5c28ce715d/image%203.png)
+![image.png](Lab-03-report/image%203.png)
 
 **Conclusion:** This exercise demonstrates the use of recursion in Haskell to process a list and compute a cumulative result.
 
@@ -275,7 +275,7 @@ Output:
 
 **Screenshots:**
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2015bb7a782d5780a389aafc5c28ce715d/image%204.png)
+![image.png](Lab-03-report/image%204.png)
 
 **Conclusion:** This exercise demonstrates the use of list comprehensions in Haskell to filter elements of a list based on a given condition.
 
@@ -329,7 +329,7 @@ Output:
 
 **Screenshots:**
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2015bb7a782d5780a389aafc5c28ce715d/image%205.png)
+![image.png](Lab-03-report/image%205.png)
 
 **Conclusion:** This exercise demonstrates the use of recursion and list concatenation in Haskell to reverse a list.
 
@@ -385,7 +385,7 @@ Output:
 
 **Screenshots:**
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2015bb7a782d5780a389aafc5c28ce715d/image%206.png)
+![image.png](Lab-03-report/image%206.png)
 
 **Conclusion:** This exercise demonstrates the use of recursion to process and transform each element of a list in Haskell.
 
@@ -435,7 +435,7 @@ Output:
 
 **Screenshots:**
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2015bb7a782d5780a389aafc5c28ce715d/image%207.png)
+![image.png](Lab-03-report/image%207.png)
 
 **Conclusion:** This exercise demonstrates the use of simple arithmetic operations to compute the square of a number in Haskell.
 
@@ -496,7 +496,7 @@ Output:
 
 **Screenshots:**
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2015bb7a782d5780a389aafc5c28ce715d/image%208.png)
+![image.png](Lab-03-report/image%208.png)
 
 **Conclusion:** This exercise demonstrates the use of function composition and basic arithmetic operations to combine addition and multiplication in Haskell.
 
@@ -556,6 +556,6 @@ Output:
 
 **Screenshots:**
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2015bb7a782d5780a389aafc5c28ce715d/image%209.png)
+![image.png](Lab-03-report/image%209.png)
 
 **Conclusion:** This exercise demonstrates how to apply multiple transformations to each element of a list in Haskell using function composition and the `map` function.
