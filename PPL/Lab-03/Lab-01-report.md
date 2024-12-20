@@ -6,7 +6,7 @@
 
 ### Exercise 01 :Open GHCi and perform basic arithmetic operations:
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2014db7a782d5780aba5dff5370f1ecf8c/image.png)
+![image.png](Lab-01-report/image.png)
 
 ### Exercise 02 :Define a function to calculate the square of a number:
 
@@ -18,7 +18,7 @@ main :: IO ()
 main = print (square 5)
 ```
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2014db7a782d5780aba5dff5370f1ecf8c/image%201.png)
+![image.png](Lab-01-report/image%201.png)
 
 ```jsx
 square :: Int -> Int
@@ -28,7 +28,7 @@ main :: IO ()
 main = print (square 50)
 ```
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2014db7a782d5780aba5dff5370f1ecf8c/image%202.png)
+![image.png](Lab-01-report/image%202.png)
 
 ## 2. Defining and Using Lists:
 
@@ -43,7 +43,7 @@ main :: IO ()
 main = print(sumList [10,20,30])
 ```
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2014db7a782d5780aba5dff5370f1ecf8c/image%203.png)
+![image.png](Lab-01-report/image%203.png)
 
 ## 3. Pattern Matching with Lists:
 
@@ -61,7 +61,7 @@ main = do
   print (isEmpty [10,20,30])
 ```
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2014db7a782d5780aba5dff5370f1ecf8c/image%204.png)
+![image.png](Lab-01-report/image%204.png)
 
 ## 4. Simple IO Operations:
 
@@ -76,4 +76,4 @@ main = do
  putStrLn ("Hello, " ++ name)
 ```
 
-![image.png](20CYS312%20-%20Principles%20of%20Programing%20Languages%20-%20La%2014db7a782d5780aba5dff5370f1ecf8c/image%205.png)
+![image.png](Lab-01-report/image%205.png)

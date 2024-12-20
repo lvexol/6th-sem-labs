@@ -1,4 +1,10 @@
-absolute :: Float -> Float
-absolute x = if x < 0 then -x else x
+isEmpty :: [a] -> Bool
+isEmpty [] = True
+isEmpty _ = False
+
 main :: IO ()
-main = print (absolute (-10.5))
+main = do
+  print (isEmpty [10])
+  print (isEmpty [])
+  print (isEmpty [10, 20, 30])
+

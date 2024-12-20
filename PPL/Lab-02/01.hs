@@ -2,5 +2,5 @@ square :: Int -> Int
 square x = x * x
 
 main :: IO ()
-main = print (square 5)
+main = print (square 10)
 

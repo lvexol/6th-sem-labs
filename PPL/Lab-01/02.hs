@@ -1,4 +1,7 @@
-isEven :: Int -> Bool
-isEven n = n `mod` 2 == 0
+sumList :: [Int] -> Int
+sumList [] = 0
+sumList (x:xs) = x + sumList xs
+
 main :: IO ()
-main = print (isEven 19)
+main = print (sumList [10, 20, 30])
+
