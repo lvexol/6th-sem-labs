@@ -1,63 +1,85 @@
-# Create a new NS2 simulator instance
 set ns [new Simulator]
 
-# Define trace files
-set tracefile [open star_topology.tr w]
+set tracefile [open out.tr w]
 $ns trace-all $tracefile
 
-set namfile [open star_topology.nam w]
+set namfile [open out.nam w]
 $ns namtrace-all $namfile
 
-# Create a network topology (star with one central node)
-set hub [$ns node]
+set n0 [$ns node]  
+set n1 [$ns node]  
+set n2 [$ns node]  
+set n3 [$ns node]  
+set n4 [$ns node]  
 
-# Number of client nodes
-set num_nodes 5
+$ns duplex-link $n0 $n1 1Mb 10ms DropTail
+$ns duplex-link $n0 $n2 1Mb 10ms DropTail
+$ns duplex-link $n0 $n3 1Mb 10ms DropTail
+$ns duplex-link $n0 $n4 1Mb 10ms DropTail
 
-# Array to store client nodes
-set nodes {}
+set tcp1 [new Agent/TCP]
+$ns attach-agent $n0 $tcp1
+set sink1 [new Agent/TCPSink]
+$ns attach-agent $n1 $sink1
+$ns connect $tcp1 $sink1
 
-# Create client nodes and link to hub
-for {set i 0} {$i < $num_nodes} {incr i} {
-    set node($i) [$ns node]
-    $ns duplex-link $node($i) $hub 1Mb 10ms DropTail
+set tcp2 [new Agent/TCP]
+$ns attach-agent $n0 $tcp2
+set sink2 [new Agent/TCPSink]
+$ns attach-agent $n2 $sink2
+$ns connect $tcp2 $sink2
+
+set tcp3 [new Agent/TCP]
+$ns attach-agent $n0 $tcp3
+set sink3 [new Agent/TCPSink]
+$ns attach-agent $n3 $sink3
+$ns connect $tcp3 $sink3
+
+set tcp4 [new Agent/TCP]
+$ns attach-agent $n0 $tcp4
+set sink4 [new Agent/TCPSink]
+$ns attach-agent $n4 $sink4
+$ns connect $tcp4 $sink4
+
+set ftp1 [new Application/FTP]
+$ftp1 attach-agent $tcp1
+$ftp1 set type_ FTP
+$ns at 0.5 "$ftp1 start"
+
+set ftp2 [new Application/FTP]
+$ftp2 attach-agent $tcp2
+$ftp2 set type_ FTP
+$ns at 0.5 "$ftp2 start"
+
+set ftp3 [new Application/FTP]
+$ftp3 attach-agent $tcp3
+$ftp3 set type_ FTP
+$ns at 0.5 "$ftp3 start"
+
+set ftp4 [new Application/FTP]
+$ftp4 attach-agent $tcp4
+$ftp4 set type_ FTP
+$ns at 0.5 "$ftp4 start"
+
+proc check_node_status {node} {
+    puts "Node $node is active."
 }
 
-# Setup TCP connections (each client to hub)
-for {set i 0} {$i < $num_nodes} {incr i} {
-    # Create TCP Agent
-    set tcp($i) [new Agent/TCP]
-    $ns attach-agent $node($i) $tcp($i)
+check_node_status $n0
+check_node_status $n1
+check_node_status $n2
+check_node_status $n3
+check_node_status $n4
 
-    # Create TCP Sink
-    set sink($i) [new Agent/TCPSink]
-    $ns attach-agent $hub $sink($i)
+$ns at 5.0 "finish"
 
-    # Establish TCP connection
-    $ns connect $tcp($i) $sink($i)
-
-    # Attach a traffic source (FTP)
-    set ftp($i) [new Application/FTP]
-    $ftp($i) attach-agent $tcp($i)
-    $ftp($i) set type_ FTP
-}
-
-# Run simulation
-$ns at 0.1 "puts \"Simulation Started\""
-$ns at 0.2 "foreach f $ftp { $f start }"
-$ns at 5.0 "foreach f $ftp { $f stop }"
-$ns at 6.0 "puts \"Simulation Finished\""
-$ns at 6.1 "finish"
-
-# Finish Procedure
 proc finish {} {
     global ns tracefile namfile
     $ns flush-trace
     close $tracefile
     close $namfile
-    exec nam star_topology.nam &
+    exec nam out.nam &
     exit 0
 }
 
-# Run the simulation
 $ns run
