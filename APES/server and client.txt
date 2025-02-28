@@ -1,0 +1,62 @@
+SERVER
+
+
+import socket
+
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket.bind(("0.0.0.0", 8080))
+server_socket.listen(1)
+
+print("Server listening on port 8080...")
+
+conn, addr = server_socket.accept()
+print(f"Connection from {addr}")
+
+while True:
+    # Receive message from client
+    data = conn.recv(1024).decode()
+    if data.lower() == "exit":
+        print("Client disconnected.")
+        break
+    print(f"Client: {data}")
+
+    # Send response to client
+    response = input("You: ")
+    conn.send(response.encode())
+
+    if response.lower() == "exit":
+        print("Server shutting down.")
+        break
+
+conn.close()
+server_socket.close()
+
+
+
+
+CLIENT
+
+import socket
+
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect(("127.0.0.1", 8080))
+
+print("Connected to server. Type 'exit' to disconnect.")
+
+while True:
+    # Send message to server
+    msg = input("You: ")
+    client_socket.send(msg.encode())
+
+    if msg.lower() == "exit":
+        print("Disconnected from server.")
+        break
+
+    # Receive response from server
+    response = client_socket.recv(1024).decode()
+    if response.lower() == "exit":
+        print("Server has disconnected.")
+        break
+    print(f"Server: {response}")
+
+client_socket.close()

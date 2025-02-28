@@ -1,27 +1,18 @@
 import socket
 
-host = "127.0.0.1"  # Localhost
-port = 12345  # Port number
-
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket.bind((host, port))
-server_socket.listen(1)  # Allow only one connection
+server_socket.bind(("0.0.0.0", 8080))
+server_socket.listen(1)
 
-print(f"Server started. Waiting for connection on {host}:{port}...")
-client_socket, client_address = server_socket.accept()
-print(f"Client {client_address} connected.")
+print("Server listening on port 8080...")
 
-while True:
-    message = client_socket.recv(1024).decode()
-    if message.lower() == "exit":
-        print("Client disconnected.")
-        break
-    print(f"Client: {message}")
+conn, addr = server_socket.accept()
+print(f"Connection from {addr}")
 
-    response = input("You: ")
-    client_socket.send(response.encode())
-    if response.lower() == "exit":
-        break
+data = conn.recv(1024).decode()
+print(f"Received: {data}")
 
-client_socket.close()
+conn.send("Hello from server!".encode())
+
+conn.close()
 server_socket.close()
