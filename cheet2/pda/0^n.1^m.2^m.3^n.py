@@ -1,5 +1,5 @@
 class PDA:
-    def _init_(self):
+    def __init__(self):
         self.stack = ['Z0']
         self.state = 'q0'
 
@@ -27,7 +27,7 @@ def test():
     tests = ["011223", "011233", "012233", "00112233", "011223", "0001112233", "0123"]
     for s in tests:
         print(f"{s}: {'Accepted' if pda.process(s) else 'Rejected'}")
-        pda._init_()
+        pda.__init__()
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     test()
