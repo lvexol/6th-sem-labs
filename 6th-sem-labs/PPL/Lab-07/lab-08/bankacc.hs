@@ -46,4 +46,3 @@ fn main() {
 
     account.withdraw(150.0);
     println!("Balance after withdrawal: ${}", account.view_balance());
-}
